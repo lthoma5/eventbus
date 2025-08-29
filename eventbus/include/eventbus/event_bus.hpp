@@ -239,7 +239,7 @@ namespace dp {
         }
 
       private:
-        using mutex_type = std::shared_mutex;
+        using mutex_type = std::recursive_mutex;
         mutable mutex_type registration_mutex_;
         std::unordered_multimap<std::type_index, event_handler> handler_registrations_;
 
